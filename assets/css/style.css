@@ -1,0 +1,997 @@
+/**
+* Template Name: Lonely - v4.10.0
+* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-lonely/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #5a656e;
+  position: relative;
+  top:-60px;
+
+}
+
+a {
+  color: #d43076;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dd5a92;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 5px;
+  z-index: 9999;
+  background:rgb(152, 180, 152);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: darkgrey;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  height: 60px;
+  background: rgb(152, 180, 152);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+#header .logo h1 {
+  font-size: 26px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+.scrolled-offset {
+  margin-top: 60px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+ padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 19px;
+  color: white;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #345676;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: 100%;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  text-transform: none;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #d43076;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: whitesmoke;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(13, 21, 29, 0.6);
+  transition: 0.3s;
+  z-index: 998;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color:  #345676;
+  font-size: 1.2em;;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: rgb(152, 180, 152);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #345676;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
+#home {
+  width: 110%;
+  height: 90vh;
+  background-size: cover;
+  margin: 0 0 10px 0;
+}
+
+#home h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+.home.image {
+  background: url("../images/Jordan2-edited.jpg") top center;
+  background-size: cover;
+  min-height: 400px;
+}
+
+#home h2 {
+  color: #eee;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+#home .btn-get-started {
+  font-size: 64px;
+  transition: 0.5s;
+  color: #fff;
+  height: 60px;
+}
+
+#home .btn-get-started:hover {
+  padding-top: 10px;
+  color: #d43076;
+}
+
+@media (min-width: 1024px) {
+  #home {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #home h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
+}
+
+
+.section-title h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 25px;
+position: relative;
+top:-30px;
+  color: #345676;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  top: -40px;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background-color: #fcf2f7;
+  min-height: 40px;
+}
+
+.breadcrumbs h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #6c757d;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+
+.about .content h2 {
+  font-weight: 500;
+  color: #2c4964;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 1.6em;
+  position:relative;
+  top: 45px;
+  right: -18px;
+}
+
+
+.about .content p {
+  position: relative;
+  top: 60px;
+ right:-20px;
+ 
+}
+
+.about .content .count-box {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.about .content .count-box i {
+  display: block;
+  font-size: 36px;
+  color: darkolivegreen;
+  float: left;
+  line-height: 0;
+}
+
+.about .content .count-box a:hover {
+  color: #6b96be;
+}
+
+.about .image {
+  background: url("../images/Jordan2-edited.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+  top:40px;
+  left: 10px;
+}
+
+@media (max-width: 991px) {
+  .about .image {
+    text-align: center;
+  }
+
+  .about .image img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 667px) {
+  .about .image img {
+    max-width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 50px;
+  display: block;
+  background: none;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2c4964;
+  
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #e4f5e1;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: rgb(152, 180, 152);
+}
+
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+#contact{
+position: relative;
+top:40px;
+padding-top: 90px;
+
+}
+
+.contact .social-links {
+  padding-bottom: 20px;
+}
+
+.contact .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #fff;
+  color: rgb(152, 180, 152);
+  line-height: 0;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  border: 1px solid rgb(152, 180, 152);
+  position: relative;
+  top:-87px;
+  right:-150px;
+}
+
+.contact .social-links a:hover {
+  background: gray;
+  color: #fff;
+
+}
+
+.contact .info {
+  color: #5a656e;
+}
+
+.contact .info i {
+  font-size: 32px;
+  color: rgb(152, 180, 152);
+  line-height: 0;
+  margin-right: 15px;
+  position: relative;
+  top:-120px;
+}
+
+.contact .info p {
+  font-size: 14px;
+  margin: 0;
+  position: relative;
+  top:-120px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background:  rgb(152, 180, 152);
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+  position: relative;
+  top:30px;
+ 
+}
+
+
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: rgb(152, 180, 152);
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid rgb(152, 180, 152);
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  position: relative;
+  top:-90px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: rgb(152, 180, 152);
+}
+
+.contact .php-email-form button[type=submit] {
+  background:rgb(152, 180, 152);;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  position: relative;
+  top:-80px;
+
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: gray;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: whitesmoke;
+  padding: 15px 0;
+  font-size: 14px;
+  box-shadow: 0px 0 20px 0 rgb(116, 116, 116);
+  position: relative;
+  top:85px;}
+
+#footer .copyright {
+  text-align: center;
+  position: relative;
+  top:5px;
+}
+
+#footer .credits {
+  padding-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+ 
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# portprojects
+--------------------------------------------------------------*/
+--------------------------------------------------*/
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+.body2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5a656e;
+  
+
+}
+
+
+.carousel-caption h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  top:20px;
+ 
+  
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  
+  text-align: center;
+  
+
+}
+.marketing .col-lg-4 h2 {
+  margin-bottom: 3em;
+  text-align: center;
+  position: relative;
+  top:75px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.marketing .col-lg-4 a {
+
+  text-align: center;
+  position: relative;
+  top:0px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.video{
+  width:600px;
+  height:500px;
+  position: relative;
+  left:530px;
+  top:-230px;
+}
+
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+ 
+  margin: 1rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #345676;
+  font-size: 35px;
+}
+
+
+
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+.title {
+  position: relative;
+    top:20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #345676;
+    font-size: 45px;
+    
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+.img1 {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: relative;
+  top:60px;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+/*--------------------------------------------------------------
+# Footerr
+--------------------------------------------------------------*/
+#footerr {
+  background: whitesmoke;
+  padding: 15px 0;
+  font-size: 14px;
+  box-shadow: 0px 0 18px 0 rgb(116, 116, 116);
+  position: relative;
+  top:65px;
+}
+
+#footerr .copyrightt {
+  text-align: center;
+  position: relative;
+  top:5px;
+}
+
+#footer .creditss {
+  padding-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+ 
+
+}
